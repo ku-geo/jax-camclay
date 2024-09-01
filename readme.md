@@ -24,52 +24,58 @@ To run this project, you need to have the following Python libraries installed:
 
 The project includes several models designed for different soil conditions and behaviors:
 
-1. **Cam-clay Model (Roscoe, 1958)**:
+1. **Cam-clay Model (Roscoe, 1963)**:
 
    - **Adapted geo-materials**: Normally consolidated loose sand and remolded clay.
 
    - **Yield Function**: 
-     $$
-     f = MD \ln \frac{p'}{p_0'^*} + D \frac{q}{p'} 
-     + \int_{0}^{t} J \, \mathrm{tr} \, D^p \, d\tau = 0
-     $$
+     
+     
+     
+     ![cam](readme.assets/cam.svg)
 
+     
+     
    - **Reference**: https://doi.org/10.1680/geot.1958.8.1.22
 
-2. **Subloading Surface Model ()**:
+2. **Subloading Surface Model (Hashiguchi, 1977)**:
 
    - **Adapted geo-materials**: Dense sand and clay with significant overconsolidation.
 
-   - **Yield Function**: 
-     $$
-     f = MD \ln \frac{p'}{p_0'^*} + D \frac{q}{p'}  - MD \ln R
-     + \int_{0}^{t} J \, \mathrm{tr} \, D^p \, d\tau = 0
-     $$
+   - **Yield Function**:
+     
+     
+     
+     ![subcam](readme.assets/subcam.svg)
+     
+     
      
    - **Reference**:  [https://doi.org/10.1016/0020-7683(89)90038-3](https://doi-org.kyoto-u.idm.oclc.org/10.1016/0020-7683(89)90038-3)
    
-3. **Superloading Surface Model**:
+3. **Superloading Surface Model (Asaoka, 1998)**:
 
    - **Adapted geo-materials**:  Soils with overconsolidated history and inherent structure.
 
    - **Yield Function**: 
-     $$
-     f = MD \ln \frac{p'}{p_0'^*} + D \frac{q}{p'} + MD \ln R^* - MD \ln R
-     + \int_{0}^{t} J \, \mathrm{tr} \, D^p \, d\tau = 0
-     $$
+     
+     
+     
+     ![supercam](readme.assets/supercam.svg)
+     
+     
      
    - **Reference**:  https://doi.org/10.3208/sandf.40.2_99
 
-2. **Stress-Induced Anisotropy Model**:
+2. **Stress-Induced Anisotropy Model (Zhang, 2007)**:
 
    - **Adapted geo-materials**: Soils exhibiting cyclic mobility and liquefaction behavior.
 
    - **Yield Function**: 
-     $$
-     f = MD \ln \frac{\tilde{p}'}{\tilde{p}_0'} + MD \ln \frac{M^2 - \zeta^2 + \tilde{\eta}^{*2}}{M^2 - \zeta^2}
-     + MD \ln R^* - MD \ln R
-     +\int_{0}^{t} J \, \mathrm{tr} \, D^p \, d\tau =0
-     $$
+   - 
+     
+     ![kicam](readme.assets/kicam.svg)
+     
+     
    - **Reference**: [https://doi.org/10.3208/sandf.47.635](https://doi-org.kyoto-u.idm.oclc.org/10.3208/sandf.47.635)
 
 ### **Future Work and Expansions**
