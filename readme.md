@@ -2,7 +2,7 @@
 
 ### **Purpose**:
 
-This project provides a simulation framework for modeling soil behavior under various stress conditions using the Cam-clay model and its extensions. It leverages JAX, a high-performance computing library, to perform parallel computations, enabling the simulation of multiple parameter sets simultaneously for comprehensive soil analysis.
+This project provides a simulation framework for modeling soil behavior under various stress conditions using the Cam-clay model and its extensions. It leverages JAX, a high-performance computing library, to perform parallel computations, enabling the simulation of multiple parameter sets simultaneously for comprehensive soil behavior analysis.
 
 ### **Key Features**:
 
@@ -26,7 +26,7 @@ The project includes several models designed for different soil conditions and b
 
 1. **Cam-clay Model (Roscoe, 1963)**:
 
-   - **Adapted geo-materials**: Normally consolidated loose sand and remolded clay.
+   - **Adapted geo-materials**: Normally consolidated clay, remolded clay, and loose sand.
 
    - **Yield Function**: 
      
@@ -36,7 +36,9 @@ The project includes several models designed for different soil conditions and b
 
      
      
-   - **Reference**: https://doi.org/10.1680/geot.1958.8.1.22
+     <p><i>M</i>, <i>D</i>: Critical state parameters, where <i>M</i> is the slope of the critical state line, and <i>D</i> represents a related plastic characteristic parameter.</p> <p><i>J</i>: Jacobian determinant of the deformation gradient tensor, representing the volumetric deformation ratio.</p><i>D<sup>p</sup></i>:represents the plastic components of stretching in the material's deformation.<p><i>p</i>, <i>q</i>: Stress parameters, where <i>p</i> is the mean effective pressure, and <i>q</i> is the deviatoric stress (related to shear stress). </p>
+     
+   - **Reference**: https://doi.org/10.1680/geot.1963.13.3.211
 
 2. **Subloading Surface Model (Hashiguchi, 1977)**:
 
@@ -48,7 +50,7 @@ The project includes several models designed for different soil conditions and b
      
      ![subcam](readme.assets/subcam.svg)
      
-     
+     <p><i>R</i>: characterize material overconsolidation </p>
      
    - **Reference**:  [https://doi.org/10.1016/0020-7683(89)90038-3](https://doi-org.kyoto-u.idm.oclc.org/10.1016/0020-7683(89)90038-3)
    
@@ -62,7 +64,7 @@ The project includes several models designed for different soil conditions and b
      
      ![supercam](readme.assets/supercam.svg)
      
-     
+     <p></p><i>R<sup>*</sup></i>: characterize inherent structure </p>
      
    - **Reference**:  https://doi.org/10.3208/sandf.40.2_99
 
@@ -75,8 +77,10 @@ The project includes several models designed for different soil conditions and b
      
      ![kicam](readme.assets/kicam.svg)
      
+     <p></p><i>η<sup>*</sup>,ζ</i>: characterize stress-induced anisotropy </p>
      
-   - **Reference**: [https://doi.org/10.3208/sandf.47.635](https://doi-org.kyoto-u.idm.oclc.org/10.3208/sandf.47.635)
+     - **Reference**: [https://doi.org/10.3208/sandf.47.635](https://doi-org.kyoto-u.idm.oclc.org/10.3208/sandf.47.635)
+     
 
 ### **Future Work and Expansions**
 
